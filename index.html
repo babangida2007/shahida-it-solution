@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shahida IT Solution Ltd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+    <div class="logo-area">
+        <img src="logo.png" alt="Shahida IT Solution Ltd Logo">
+        <h1>Shahida IT Solution Ltd</h1>
+    </div>
+    </div>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</nav>
+
+    <nav>
+    <a href="#">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+</header>
+<section class="portfolio" id="portfolio">
+
+    <h2>Our Portfolio</h2>
+
+    <p class="portfolio-intro">
+        Here are some of the creative and digital projects
+        we can create for our clients.
+    </p>
+
+    <div class="portfolio-container">
+
+        <div class="portfolio-box">
+    <img src="design1.png" alt="Shahida IT Solution Graphic Design">
+
+    <h3>Graphic Design</h3>
+
+    <p>
+        Professional flyers, logos, invitations and
+        business designs.
+    </p>
+</div>
+
+        <div class="portfolio-box">
+    <img src="website.png" alt="Shahida IT Solution Website Design">
+
+    <h3>Website Design</h3>
+
+    <p>
+        Modern, responsive and professional websites
+        for businesses and organizations.
+    </p>
+</div>
+
+        <div class="portfolio-box">
+    <img src="digital.png" alt="Shahida IT Solution Digital Solutions">
+
+    <h3>Digital Solutions</h3>
+
+    <p>
+        Reliable IT support and digital solutions
+        that help businesses work smarter and grow.
+    </p>
+</div>
+
+</section>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            WELCOME TO SHAHIDA IT SOLUTION
+        </p>
+
+        <h2>
+            We Turn <span>Ideas</span><br>
+            Into Digital Reality.
+        </h2>
+
+        <p class="hero-description">
+            Creative technology, powerful designs and smart digital
+            solutions built to help your business stand out,
+            connect with customers and grow.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#services" class="hero-btn">
+                Explore Our Services
+            </a>
+
+            <a href="#contact" class="hero-outline-btn">
+                Let's Work Together
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="about" id="about">
+
+    <h2>About Us</h2>
+
+    <p>
+        Shahida IT Solution Ltd is a digital company dedicated
+        to providing creative, reliable and affordable technology
+        solutions for individuals and businesses.
+    </p>
+
+    <p>
+        Our goal is to help people and businesses grow through
+        technology, creativity and innovation.
+    </p>
+
+</section>
+    <section class="why-us">
+
+    <h2>Why Choose Us?</h2>
+
+    <p class="why-intro">
+        At Shahida IT Solution Ltd, we don't just provide services —
+        we create solutions that make a difference.
+    </p>
+
+    <div class="why-container">
+
+        <div class="why-box">
+            <h3>✨ Creative & Innovative</h3>
+            <p>
+                We bring fresh ideas, modern technology and
+                creative solutions to every project.
+            </p>
+        </div>
+
+        <div class="why-box">
+            <h3>🎯 Client-Focused</h3>
+            <p>
+                We listen to your needs and create solutions
+                that match your goals.
+            </p>
+        </div>
+
+        <div class="why-box">
+            <h3>⚡ Reliable & Professional</h3>
+            <p>
+                We are committed to quality, reliability
+                and excellent customer service.
+            </p>
+        </div>
+
+        <div class="why-box">
+            <h3>🚀 Growth-Oriented</h3>
+            <p>
+                Our digital solutions are designed to help
+                individuals and businesses grow.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="services" id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="service-container">
+
+            <div class="service-box">
+                <h3>Graphic Design</h3>
+                <p>
+                    We create beautiful and professional designs
+                    for businesses, events and personal brands.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <h3>Web Development</h3>
+                <p>
+                    We build modern, responsive and user-friendly
+                    websites for businesses and organizations.
+                </p>
+            </div>
+
+       
+            <div class="service-box">
+                <h3>IT Support</h3>
+                <p>
+                    We provide reliable technology support and
+                    solutions to help businesses work efficiently.
+                </p>
+            </div>
+
+             <div class="service-box">
+                <h3>Digital Solutions</h3>
+                <p>
+                    We provide creative digital solutions that help
+                    individuals and businesses grow.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>We would love to hear from you.</p>
+
+    <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+
+        <input type="text" placeholder="Your Full Name" required>
+
+        <input type="email" placeholder="Your Email Address" required>
+
+        <input type="tel" placeholder="Your Phone Number">
+
+        <textarea placeholder="Write your message here..." rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+<a href="https://wa.me/2349011114515"
+   class="whatsapp-btn"
+   target="_blank">
+    Chat
+    <script>
+function sendToEmail(event) {
+    event.preventDefault();
+
+    const name = document.querySelector('input[type="text"]').value;
+    const email = document.querySelector('input[type="email"]').value;
+    const phone = document.querySelector('input[type="tel"]').value;
+    const message = document.querySelector('textarea').value;
+
+    const subject = "New Message from Shahida IT Solution Website";
+
+    const body =
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Phone: " + phone + "\n\n" +
+        "Message:\n" + message;
+
+    window.location.href =
+        "mailto:aishaibrahimnasir3@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+}
+</script>
+
+</script>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    const name = document.querySelector('input[placeholder="Your Full Name"]').value;
+    const email = document.querySelector('input[placeholder="Your Email Address"]').value;
+    const phone = document.querySelector('input[placeholder="Your Phone Number"]').value;
+    const message = document.querySelector('textarea').value;
+
+    const whatsappNumber = "2349011144515";
+
+    const text =
+        "Hello Shahida IT Solution Ltd!%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Email: " + encodeURIComponent(email) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A%0A" +
+        "Message: " + encodeURIComponent(message);
+
+    window.open(
+        "https://wa.me/" + whatsappNumber + "?text=" + text,
+        "_blank"
+    );
+}
+</script>
+</body>
+<footer class="footer">
+
+    <h3>Shahida IT Solution Ltd</h3>
+
+    <p>Professional Digital Solutions for Your Business</p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 Shahida IT Solution Ltd. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script>
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
+
+    
