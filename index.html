@@ -8,6 +8,7 @@
     <title>Shahida IT Solution Ltd</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<meta name="google-site-verification" content="WlHNg7ALVAjF-YSCBhE2Zn_65LP13KnkSOHv4QoGdGQ" />
 
 <body>
 
@@ -218,10 +219,61 @@
         </div>
 
     </section>
+    <section class="pricing" id="pricing">
+    <h2>Our Services</h2>
+
+    <p class="pricing-intro">
+        Choose the service you need and request a personalized quote.
+    </p>
+
+    <div class="service-cards">
+
+        <div class="service-card">
+            <h3>🎨 Graphic Design</h3>
+            <p>Professional and creative designs for your business and events.</p>
+            <a href="#contact" class="quote-btn" onclick="selectService('Graphic Design')">Get a Quote</a>
+        </div>
+
+        <div class="service-card">
+            <h3>💌 Invitation Design</h3>
+            <p>Beautiful invitation cards for weddings, birthdays and special events.</p>
+            <a href="#contact" class="quote-btn" onclick="selectService('Invitation Design')">Get a Quote</a>
+        </div>
+
+        <div class="service-card">
+            <h3>🌐 Website Development</h3>
+            <p>Modern and responsive websites for individuals and businesses.</p>
+            <a href="#contact" class="quote-btn" onclick="selectService('Website Development')">Get a Quote</a>
+        </div>
+
+        <div class="service-card">
+            <h3>💻 IT Support</h3>
+            <p>Reliable technology support and digital solutions for your needs.</p>
+            <a href="#contact" class="quote-btn" onclick="selectService('IT Support')">Get a Quote</a>
+        </div>
+
+        <div class="service-card">
+            <h3>🖼️ Logo Design</h3>
+            <p>Unique and professional logos that represent your brand.</p>
+            <a href="#contact" class="quote-btn" onclick="selectService('Logo Design')">Get a Quote</a>
+        </div>
+
+        <div class="service-card">
+            <h3>📱 Social Media Design</h3>
+            <p>Eye-catching designs for WhatsApp, Facebook, Instagram and more.</p>
+            <a href="#contact" class="quote-btn" onclick="selectService('Social Media Design')">Get a Quote</a>
+        </div>
+
+    </div>
+</section>
 
     <section class="contact" id="contact">
 
     <h2>Contact Us</h2>
+    <p class="contact-intro">
+    Need a service? Tell us what you need and request a personalized quote.
+    We will contact you with the price and details.
+</p>
 
     <p>We would love to hear from you.</p>
 
@@ -232,12 +284,29 @@
         <input type="email" placeholder="Your Email Address" required>
 
         <input type="tel" placeholder="Your Phone Number">
+        <label for="service">Service Needed</label>
+
+<select id="service" name="service" required>
+    <option value="">Select a service</option>
+    <option value="Graphic Design">Graphic Design</option>
+    <option value="Invitation Design">Invitation Design</option>
+    <option value="Website Development">Website Development</option>
+    <option value="IT Support">IT Support</option>
+    <option value="Logo Design">Logo Design</option>
+    <option value="Social Media Design">Social Media Design</option>
+</select>
 
         <textarea placeholder="Write your message here..." rows="6" required></textarea>
 
         <button type="submit">Send Message</button>
 
     </form>
+    <div class="payment-box">
+    <h3>💳 Pay for Your Service</h3>
+    <p>After receiving your quote, you can make your payment securely online.</p>
+    <button type="button" id="paystack-button">Pay Now</button>
+</div>
+
 
 </section>
 
@@ -246,54 +315,7 @@
    target="_blank">
     Chat
     <script>
-function sendToEmail(event) {
-    event.preventDefault();
 
-    const name = document.querySelector('input[type="text"]').value;
-    const email = document.querySelector('input[type="email"]').value;
-    const phone = document.querySelector('input[type="tel"]').value;
-    const message = document.querySelector('textarea').value;
-
-    const subject = "New Message from Shahida IT Solution Website";
-
-    const body =
-        "Name: " + name + "\n" +
-        "Email: " + email + "\n" +
-        "Phone: " + phone + "\n\n" +
-        "Message:\n" + message;
-
-    window.location.href =
-        "mailto:aishaibrahimnasir3@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-}
-</script>
-
-</script>
-
-<script>
-function sendToWhatsApp(event) {
-    event.preventDefault();
-
-    const name = document.querySelector('input[placeholder="Your Full Name"]').value;
-    const email = document.querySelector('input[placeholder="Your Email Address"]').value;
-    const phone = document.querySelector('input[placeholder="Your Phone Number"]').value;
-    const message = document.querySelector('textarea').value;
-
-    const whatsappNumber = "2349011144515";
-
-    const text =
-        "Hello Shahida IT Solution Ltd!%0A%0A" +
-        "Name: " + encodeURIComponent(name) + "%0A" +
-        "Email: " + encodeURIComponent(email) + "%0A" +
-        "Phone: " + encodeURIComponent(phone) + "%0A%0A" +
-        "Message: " + encodeURIComponent(message);
-
-    window.open(
-        "https://wa.me/" + whatsappNumber + "?text=" + text,
-        "_blank"
-    );
-}
 </script>
 </body>
 <footer class="footer">
@@ -322,7 +344,11 @@ function toggleMenu() {
     nav.classList.toggle("active");
 }
 </script>
-
+<script src="script.js"></script>
+</body>
+</html>
+<script src="https://js.paystack.co/v2/inline.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
 
